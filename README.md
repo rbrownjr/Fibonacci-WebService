@@ -10,11 +10,11 @@ To run the JUnit tests
 1. cd JUnitTests
 2. On Windows, compile the sources by executing the following command
    javac -cp .;.\JUNIT\junit-4.12.jar;.\JUNIT\hamcrest-core-1.3.jar com\mycompany\junittests\WSJUnitTests.java
-3. To run the tests, execute
-   java -cp .;.\JUNIT\junit-4.12.jar;.\JUNIT\hamcrest-core-1.3.jar org.junit.runner.JUnitCore com.mycompany.junittests.WSJUnitTests
+3. To run the tests, execute "the full command line" below
+   java -cp .;.\JUNIT\junit-4.12.jar;.\JUNIT\hamcrest-core-1.3.jar org.junit.runner.JUnitCore         com.mycompany.junittests.WSJUnitTests
 
 The Fibonacci Web Service was developed using Tomcat 7 and Juli for logging. The Juli library is not included in the WAR
-file, so you will need to deploy the WAR file on a Tomcat Application Server.
+file, so you will need to deploy the WAR file on a Tomcat Application Server for logging to work.
 To build and deploy the Web Service to your Tomcat Application Server, do the following
 1. cd BuildDir
 2. Open the build.xml file and replace the tomcat.home property with the home directory of your Tomcat installation.
@@ -26,3 +26,5 @@ To build and deploy the Web Service to your Tomcat Application Server, do the fo
    http://localhost:8080/FibonacciWS//FibonacciServlet?num=5
 6. To see the result in XML, JSON, or HTML, use the "fmt" parameter as so,
    http://localhost:8080/FibonacciWS//FibonacciServlet?num=5&&fmt=HTML
+   http://localhost:8080/FibonacciWS//FibonacciServlet?num=5&&fmt=JSON
+   http://localhost:8080/FibonacciWS//FibonacciServlet?num=5&&fmt=XML
