@@ -151,27 +151,33 @@ public class FibonacciServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		
+		response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Only GET is Allowed");
 	}
 
 	/**
 	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Only GET is Allowed");
 	}
 
 	/**
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Only GET is Allowed");
 	}
 
 	/**
 	 * @see HttpServlet#doTrace(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doTrace(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
+		response.sendError(HttpServletResponse.SC_METHOD_NOT_ALLOWED, "Only GET is Allowed");
+		
 	}
 
 }

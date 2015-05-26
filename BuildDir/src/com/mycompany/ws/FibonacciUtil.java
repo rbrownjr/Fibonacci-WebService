@@ -17,6 +17,8 @@ import java.util.logging.Level;
 import java.beans.XMLEncoder;
 import java.io.ByteArrayOutputStream;
 
+import org.json.*;
+
 
 public class FibonacciUtil {
 
@@ -94,9 +96,9 @@ public class FibonacciUtil {
 	
 	//Convert Fibonacci sequence to JSON format.
 	public static void toJSON(StringBuffer rst)
-	{
-		rst.insert(0, "{\"result\":\"");
-		rst.append("\"}");
-			
+	{		
+		String jsnStr = new JSONStringer().object().key("JSON").value(rst.toString()).endObject().toString();
+		
+		rst.replace(0, rst.length(), jsnStr);
 	}
 }
